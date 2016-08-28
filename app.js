@@ -4,7 +4,7 @@ var app = express();
 app.use(bodyParser.json()); 
 
 var couchbase = require('couchbase');
-const COUCH_SERVER = process.env.COUCH_SERVER || '127.0.0.1'
+const COUCH_SERVER = process.env.COUCH_SERVER || 'localhost'
 var cluster = new couchbase.Cluster("couchbase://"+COUCH_SERVER);
 var bucket = cluster.openBucket('default');
 
