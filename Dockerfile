@@ -6,7 +6,7 @@ RUN useradd --user-group --create-home --shell /bin/false app &&\
 ARG NEXUS_SERVER
 ENV HOME=/home/app
 # COPY package.json $HOME/api_app/
-COPY package.json app.js $HOME/api_app
+COPY package.json app.js $HOME/api_app/
 RUN chown -R app:app $HOME/*
 
 USER app
